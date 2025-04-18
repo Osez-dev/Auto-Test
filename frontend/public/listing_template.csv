@@ -1,0 +1,3 @@
+title,condition,regno,make,model,yearofmanufacture,mileage,fuelType,bodyType,transmission,district,city,engineCc,price,sellersNotes,grade,exteriorColor,interiorColor,noOfOwners,blueTGrade,yearOfReg,imageUrls
+"Toyota Camry 2020","Used","ABC123","Toyota","Camry",2020,50000,"Petrol","Sedan","Automatic","Central","Colombo",2500,3500000,"Well maintained vehicle","A","Black","Beige",1,"4.5",2020,"https://example.com/image1.jpg,https://example.com/image2.jpg"
+"Honda Civic 2019","Used","XYZ789","Honda","Civic",2019,45000,"Petrol","Sedan","Automatic","Western","Gampaha",1800,2800000,"Single owner","B+","White","Black",1,"4.2",2019,"https://example.com/image3.jpg" 

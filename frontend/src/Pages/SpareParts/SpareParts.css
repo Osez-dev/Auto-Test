@@ -1,0 +1,10 @@
+.spare-parts-container {
+    padding: 20px;
+  }
+  
+  .spare-parts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+  }
+  

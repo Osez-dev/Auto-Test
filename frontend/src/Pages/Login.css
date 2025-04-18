@@ -1,0 +1,203 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background: linear-gradient(to right, #f0f4f8, #ffffff);
+  color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Login Page Container */
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 70px;
+  background: linear-gradient(to right, #b3d1ef, #ffffff);
+  z-index: 1;
+  justify-content: flex-start;
+  margin-top: 50px;
+  margin-bottom: -50px;
+  margin-left: -200px;
+  height: 100px;
+  position: relative;
+  background-image: url("https://img.freepik.com/free-vector/car-led-lights-realistic-composition-with-view-night-road-silhouettes-automobile-traffic-lights-illustration_1284-28531.jpg?t=st=1739940929~exp=1739944529~hmac=2a110b1d798bf60544639ab3594bf9014040bb6aae2cf1c76f3c92b21998d845&w=996");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Adding Blur Effect */
+.login-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  z-index: -1;
+}
+
+/* Login Form Container */
+.login-form-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.603);
+}
+
+/* Title */
+.login-form-title {
+  color: #002855;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* Input Fields */
+.login-form-input {
+  width: 93%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 1px solid #d1d1d1;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f8f9fa;
+  justify-content: flex-end;
+  margin-right: 30px;
+}
+
+.login-form-input:focus {
+  border-color: #0056b3;
+  box-shadow: 0px 0px 8px rgba(0, 86, 179, 0.4);
+  outline: none;
+}
+
+/* Buttons */
+.login-form-button,
+.google-login-button,
+.facebook-login-button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Primary Button */
+.login-form-button {
+  background-color: #0056b3;
+  color: white;
+  box-shadow: 0px 4px 12px rgba(0, 86, 179, 0.4);
+}
+
+.login-form-button:hover {
+  background-color: #003d80;
+}
+
+/* Google Login */
+.google-login-button {
+  background-color: #ffffff;
+  color: #4285f4;
+  border: 1px solid #4285f4;
+}
+
+.google-login-button:hover {
+  background-color: #e8f0fe;
+  color: #357ae8;
+}
+
+/* Facebook Login */
+.facebook-login-button {
+  background-color: #3b5998;
+  color: #ffffff;
+}
+
+.facebook-login-button:hover {
+  background-color: #324b80;
+}
+
+/* Social Icon */
+.social-icon {
+  font-size: 1.3rem;
+}
+
+/* Remember Me */
+.remember-me {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.remember-me input {
+  margin-right: 8px;
+}
+
+/* Text Links */
+p.login-form-text {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+p.login-form-text span.login-form-link {
+  color: #0056b3;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+p.login-form-text span.login-form-link:hover {
+  color: #003d80;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-form-container {
+    padding: 30px;
+  }
+
+  .login-form-title {
+    font-size: 1.8rem;
+  }
+
+  .login-form-input {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  p.login-form-text {
+    font-size: 0.85rem;
+  }
+}
