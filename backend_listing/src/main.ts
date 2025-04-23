@@ -10,9 +10,18 @@ async function bootstrap() {
 
   const configService = app.get(ConfigService);
   const frontendUrl = configService.get<string>('FRONTEND_URL');
+  const port = configService.get<number>('PORT', 3000);
+
+  // Add health check endpoint
+  app.getHttpAdapter().get('/health', (req, res) => {
+    res.status(200).json({ status: 'ok' });
+  });
 
   const cors = require('cors');
-  app.use(cors({ origin: frontendUrl, credentials: true }));
+  app.use(cors({ 
+    origin: process.env.NODE_ENV === 'production' ? frontendUrl : true, 
+    credentials: true 
+  }));
 
   // Enable cookie parser
   app.use(cookieParser());
@@ -30,6 +39,6 @@ async function bootstrap() {
   app.use(json({ limit: '50mb' }));
   app.use(urlencoded({ extended: true, limit: '50mb' }));
 
-  await app.listen(3000);
+  await app.listen(port);
 }
 bootstrap();
